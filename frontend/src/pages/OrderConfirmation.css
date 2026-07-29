@@ -1,0 +1,140 @@
+.confirmation-page {
+  padding: 4rem 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.confirmation-card {
+  max-width: 650px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 4rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.confirmation-icon {
+  font-size: 5rem;
+  color: var(--success);
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-card h2 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.order-number {
+  color: var(--primary-color); /* Order # to Orange */
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 107, 0, 0.1);
+  border-radius: 30px;
+}
+
+.order-details {
+  text-align: left;
+  background: #fcfcfc;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.detail-value {
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Re-using current logic but with modern colors */
+.status-badge.pending { background: #fff4e5; color: #ff9900; }
+.status-badge.processing { background: #e5f1ff; color: #007aff; }
+.status-badge.completed { background: #e5fff1; color: #00c853; }
+
+.order-items {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.order-items h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--bg-color);
+  padding-bottom: 0.5rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.order-item .item-name {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.order-item .item-price {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.confirmation-actions .btn {
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .confirmation-card {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .confirmation-card h2 {
+    font-size: 1.8rem;
+  }
+}

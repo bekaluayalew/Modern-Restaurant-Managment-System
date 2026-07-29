@@ -1,0 +1,177 @@
+:root {
+  --primary-color: #FF6B00;    /* Vibrant Orange */
+  --secondary-color: #2D2D2D;  /* Dark Text/Sidebar */
+  --bg-color: #F8F9FA;         /* Modern Light Gray */
+  --white: #FFFFFF;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --success: #27AE60;
+  --danger: #E74C3C;
+  --border-color: #E0E4E8;
+}
+.footer {
+  background: #1A1A1A; /* Deep Charcoal from mockup */
+  color: #B0B0B0;
+  padding: 4rem 0 0;
+  margin-top: auto;
+  border-top: 4px solid var(--primary-color); /* Orange accent top border */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.footer-section h4 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--primary-color); /* Updated to Orange */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+  color: #B0B0B0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color); /* Updated to Orange */
+  padding-left: 5px;
+}
+
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.footer-logo-icon {
+  color: var(--primary-color); /* Updated to Orange */
+  font-size: 2.5rem;
+}
+
+.footer-description {
+  color: #888888;
+  line-height: 1.7;
+  max-width: 300px;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #2D2D2D;
+  color: var(--white);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.social-link:hover {
+  background: var(--primary-color); /* Updated to Orange */
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-icon {
+  font-size: 1.1rem;
+  min-width: 24px;
+  color: var(--primary-color); /* Updated to Orange icons */
+}
+
+.footer-bottom {
+  border-top: 1px solid #2D2D2D;
+  background: #111111;
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+@media (max-width: 968px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
