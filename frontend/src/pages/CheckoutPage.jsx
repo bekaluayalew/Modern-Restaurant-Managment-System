@@ -57,8 +57,9 @@ const CheckoutPage = () => {
     setIsSubmitting(true);
 
     try {
-      const orderData = {
+     const orderData = {
         ...formData,
+        userId: isAuthenticated ? user?._id : undefined,
         items: cartItems.map(item => ({
           productId: item._id,
           productName: item.name,

@@ -273,11 +273,14 @@ const seedDatabase = async () => {
     
     console.log('\n👤 Login Credentials:');
     console.log('   Admin:');
-    console.log('   Email: admin@coffeeshop.com');
+    console.log('   Email: admin@mrms.com');
     console.log('   Password: admin123');
+    console.log('   Admin #2:');
+    console.log('   Email: bekalu@gmail.com');
+    console.log('   Password: bekalu@123');
     console.log('   Customer:');
-    console.log('   Email: john@example.com');
-    console.log('   Password: password123');
+    console.log('   Email: beki@gmail.com');
+    console.log('   Password: beki123');
 
     process.exit(0);
   } catch (error) {

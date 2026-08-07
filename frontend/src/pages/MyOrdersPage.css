@@ -1,0 +1,112 @@
+.my-orders-page {
+  padding: 3rem 0;
+  min-height: 60vh;
+}
+
+.my-orders-page h1 {
+  margin-bottom: 2rem;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+}
+
+.no-orders .btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.my-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.my-order-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.my-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.my-order-header .order-number {
+  font-weight: 700;
+  display: block;
+}
+
+.my-order-header .order-date {
+  font-size: 0.85rem;
+  color: #718096;
+  display: block;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  height: fit-content;
+}
+
+.status-badge.pending { background: #fff3cd; color: #856404; }
+.status-badge.processing,
+.status-badge.preparing { background: #cfe2ff; color: #084298; }
+.status-badge.ready { background: #d1e7dd; color: #0f5132; }
+.status-badge.completed { background: #d1e7dd; color: #0f5132; }
+.status-badge.cancelled { background: #f8d7da; color: #842029; }
+
+.my-order-items {
+  margin-bottom: 1rem;
+}
+
+.my-order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.my-order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.my-order-total {
+  font-weight: 700;
+}
+
+.cancel-order-btn {
+  background: white;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-order-btn:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.cancel-order-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

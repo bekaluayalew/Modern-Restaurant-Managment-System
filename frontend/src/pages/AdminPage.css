@@ -1,17 +1,34 @@
-.admin-error {
+.admin-tabs {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem 2rem 0;
+  border-bottom: 1px solid #E0E4E8;
+}
+
+.admin-tabs button {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.admin-tabs button:hover {
+  color: #FF6B00;
+}
+
+.admin-tabs button.active {
+  color: #FF6B00;
+  border-bottom-color: #FF6B00;
+}
+
+.admin-tab-content {
+  background-color: #F8F9FA;
   min-height: 60vh;
-  text-align: center;
-}
-
-.admin-error h2 {
-  color: #e74c3c;
-  margin-bottom: 0.5rem;
-}
-
-.admin-error p {
-  color: #666;
+  padding: 2rem;
 }

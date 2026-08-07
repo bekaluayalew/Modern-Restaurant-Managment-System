@@ -46,7 +46,7 @@ const Navbar = () => {
                 Menu
               </Link>
             </li>
-            
+
             {isAuthenticated ? (
               <>
                 {user?.role === 'admin' && (
@@ -62,6 +62,11 @@ const Navbar = () => {
                     {cartItemCount > 0 && (
                       <span className="cart-badge">{cartItemCount}</span>
                     )}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/my-orders" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+                    My Orders
                   </Link>
                 </li>
                 <li>

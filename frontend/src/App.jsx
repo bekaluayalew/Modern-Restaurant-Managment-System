@@ -15,6 +15,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AdminPage from './pages/AdminPage';
 import OrderConfirmation from './pages/OrderConfirmation';
+import MyOrdersPage from './pages/MyOrdersPage';
 
 // Import Context
 import { CartProvider } from './context/CartContext';
@@ -36,6 +37,7 @@ function App() {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/admin" element={<AdminPage />} />
               <Route path="/order-confirmation" element={<OrderConfirmation />} />
+              <Route path="/my-orders" element={<MyOrdersPage />} />
             </Routes>
           </main>
           <Footer />

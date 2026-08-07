@@ -1,16 +1,102 @@
-# React + Vite
+# Modern Restaurant Management System (MRMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack restaurant/coffee-shop ordering platform. Customers can browse the menu, 
+add items to a cart, check out, and track their order. Admins get a protected dashboard 
+to view all orders and update their status.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Frontend:** React 19, Vite, React Router, Axios, Recharts, React Icons
+**Backend:** Node.js, Express, MongoDB (Mongoose)
+**Auth:** JWT + bcrypt password hashing
 
-## React Compiler
+## Project Structure
+├── backend/ # Express API + MongoDB models
+│ ├── models/ # Product, User, Order schemas
+│ ├── server.js # API routes & entry point
+│ ├── seedData.js # Populates the DB with sample products/users
+│ └── migrateData.js
+└── frontend/ # React + Vite app
+└── src/
+├── pages/ # Route-level pages
+├── components/ # customer/, admin/, common/
+├── context/ # Auth + Cart state
+└── services/ # API client (axios)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (v18+)
+- A MongoDB database (local or MongoDB Atlas)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in `backend/` with:
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_random_secret_string
+
+Seed the database with sample products and users:
+
+```bash
+npm run seed
+```
+
+Start the API server:
+
+```bash
+npm run dev
+```
+
+The API will run at `http://localhost:5000`.
+
+### 2. Frontend Setup
+
+```bash
+cd frontend
+npm install
+```
+
+Create a `.env` file in `frontend/` with:
+VITE_API_URL=http://localhost:5000/api
+
+Start the dev server:
+
+```bash
+npm run dev
+```
+
+The app will run at `http://localhost:5173`.
+
+## Available Scripts
+
+**Backend** (`backend/`)
+- `npm run dev` — start the API with nodemon (auto-restart)
+- `npm start` — start the API normally
+- `npm run seed` — populate the database with sample data
+- `npm run migrate` — run data migration script
+
+**Frontend** (`frontend/`)
+- `npm run dev` — start the Vite dev server
+- `npm run build` — build for production
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint
+
+## Features
+
+- Customer menu browsing with product cards and categories
+- Shopping cart with persistent state (localStorage)
+- Checkout flow with order confirmation
+- User registration and login (JWT-based auth, hashed passwords)
+- Admin dashboard (role-protected) to view orders and update order status
+
+## Notes
+
+- Admin access requires a user with `role: 'admin'` in the database — seeding creates one 
+  by default (check `backend/seedData.js` for credentials).
+- `.env` files are git-ignored and must be created locally per the steps above.
