@@ -4,6 +4,8 @@ const Product = require('./models/Product');
 const User = require('./models/User');
 const Order = require('./models/Order');
 require('dotenv').config();
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 // Sample Products
 const sampleProducts = [
@@ -208,6 +210,16 @@ const sampleProducts = [
     rating: 4.4,
     reviews: 48
   },
+  {
+    name:'kitefo' ,
+    description: 'reshly squeezed lemons blended with cold water ' ,
+    price: 1980,
+    category: 'foods' ,
+    stock: 50,
+    image: 'kitefo.jpg' ,
+    rating: 4.4,
+    reviews: 100  
+    }
 ];
 
 // Sample Users

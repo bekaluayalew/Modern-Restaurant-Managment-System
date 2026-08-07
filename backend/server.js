@@ -4,6 +4,8 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 // Load environment variables
 dotenv.config();
