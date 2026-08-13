@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer-section brand-section">
           <div className="footer-logo">
             <FaUtensils className="footer-logo-icon" />
-            <span>Modern Restaurant</span>
+            <span>Tasty</span>
           </div>
           <p className="footer-description">
              Savor the art of fine dining.Where every plate tells a story.

@@ -8,20 +8,27 @@ const LoginPage = () => {
     email: '',
     password: ''
   });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+
     setError('');
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.email || !formData.password) {
       setError('Please fill in all fields');
       return;
@@ -30,7 +37,9 @@ const LoginPage = () => {
     try {
       setLoading(true);
       setError('');
+
       await login(formData);
+
       navigate('/');
     } catch (err) {
       setError(err.message || 'Login failed. Please try again.');
@@ -43,18 +52,25 @@ const LoginPage = () => {
     <div className="login-page">
       <div className="login-container">
         <div className="login-card">
+
           <div className="login-header">
             <h2>Welcome Back</h2>
             <p>Login to your account to continue</p>
           </div>
-          
+
           {error && (
-            <div className="error-message">{error}</div>
+            <div className="error-message">
+              {error}
+            </div>
           )}
-          
+
           <form onSubmit={handleSubmit} className="login-form">
+
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">
+                Email Address
+              </label>
+
               <input
                 type="email"
                 id="email"
@@ -65,9 +81,21 @@ const LoginPage = () => {
                 required
               />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <div className="password-label">
+                <label htmlFor="password">
+                  Password
+                </label>
+
+                <Link
+                  to="/forgot-password"
+                  className="forgot-password"
+                >
+                  Forgot Password?
+                </Link>
+              </div>
+
               <input
                 type="password"
                 id="password"
@@ -78,21 +106,26 @@ const LoginPage = () => {
                 required
               />
             </div>
-            
-            <button 
-              type="submit" 
+
+            <button
+              type="submit"
               className="login-btn"
               disabled={loading}
             >
               {loading ? 'Logging in...' : 'Login'}
             </button>
+
           </form>
-          
+
           <div className="login-footer">
             <p>
-              Don't have an account? <Link to="/register">Register</Link>
+              Don't have an account?{' '}
+              <Link to="/register">
+                Register
+              </Link>
             </p>
           </div>
+
         </div>
       </div>
     </div>

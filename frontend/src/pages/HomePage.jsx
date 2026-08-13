@@ -9,7 +9,7 @@ const HomePage = () => {
         <div className="hero-container container">
           <div className="hero-content">
             <h1 className="hero-title">
-              Welcome to <span className="highlight">Modern Restaurant</span>
+              Welcome to <span className="highlight">Tasty Restaurant</span>
             </h1>
             <p className="hero-description">
               Savor the art of fine dining.Where every plate tells a story.

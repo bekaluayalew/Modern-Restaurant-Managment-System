@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo" onClick={() => setIsMobileMenuOpen(false)}>
           <FaUtensils className="logo-icon" />
-          <span className="logo-text">MRMS</span>
+          <span className="logo-text">Tasty</span>
         </Link>
 
         <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
